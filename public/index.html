@@ -76,6 +76,7 @@ Attention! Sending the quiz link to other people is a violation of Honor code!</
               <input type="checkbox" id="q4d" name="q4" value="d"><label for="q4d">Adequate performance for applications with tight real-time constraints.</label><BR>
           </p>
     <input type="submit" value="Submit" />
+    <p id="result"></p>
 </form>
 
 
@@ -127,7 +128,7 @@ Attention! Sending the quiz link to other people is a violation of Honor code!</
         // Note: we disable elements AFTER the form data has been serialized.
         // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
-
+        $("#result").text("Sending data...");
         // Fire off the request to /form.php
         request = $.ajax({
             url:
@@ -139,12 +140,14 @@ Attention! Sending the quiz link to other people is a violation of Honor code!</
         // Callback handler that will be called on success
         request.done(function (response, textStatus, jqXHR){
             // Log a message to the console
+            $("#result").text("Sending Succeeded!");
             console.log("Hooray, it worked!");
         });
 
         // Callback handler that will be called on failure
         request.fail(function (jqXHR, textStatus, errorThrown){
             // Log the error to the console
+            $("#result").text("Sending Failed! Please Resend!");
             console.error(
                 "The following error occurred: "+
                 textStatus, errorThrown
