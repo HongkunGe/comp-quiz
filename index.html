@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <!--meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"-->
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+      <title>COMP521-QUIZ</title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+      <script src="bootbox.min.js"></script>
+      <script type="text/javascript">
+            //<![CDATA[
+            try{if (!window.CloudFlare) {var
+            CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"013a6dfe92ccb2d298ebd8a4d52e5acf",petok:"a0afbd67069e149e812d0d17325e5d657f39e8b7-1440457561-1800",betok:"b56a32eb1826c338a9d11ce48b747bb075479fa8-1440457561-120",zone:"hawksey.info",rocket:"a",apps:{}}];document.write('<script
+            type="text/javascript"
+            src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=e9627cd26a/cloudflare.min.js"><'+'\/script>');}}catch(e){};
+            //]]>
+      </script>
+      <script data-cfasync="false"src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Comp 521 Quiz</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://quiz-hongkun.apps.unc.edu/">COMP521 Quiz</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form id="foo" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input name="PID" type="text" placeholder="PID" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="FirstName" type="text" placeholder="First Name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input  name="LastName" type="text" placeholder="Last Name" class="form-control">
+            </div>
+
+            <!--button value="Submit" onclick="submitForms()" class="btn btn-success"/>Submit</button-->
+            <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#popupInfowindow">Submit</button  input type="button">
+
+
+
+  
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="popupInfowindow" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p id="result"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Files and Databases</h1>
+        <p>Please fill in your PID and name first. Attention that Sending the quiz link to other people is a violation of Honor code! You can check your submission in the google sheet once you submitted. Enjoy!</p>
+        <p><a class="btn btn-primary btn-lg" href="https://docs.google.com/spreadsheets/d/1KBuc02owac2qxm_3-JcCZYKmIsX85761A0NFo-bxHPg/edit?usp=sharing" role="button">Check it »</a></p>
+      </div>
+    </div>
+
+<!-- Information Start-->
+<!--h3 id="p01"> Fill in your PID and NAME.<BR>
+Attention! Sending the quiz link to other people is a violation of Honor code!</h3-->
+
+<form id="foo2">
+
+              <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                  <div class="col-md-4">
+                      <P>1. Which of the following statements characterize the relational database model?<BR>
+                        <input type="checkbox" id="q1a" name="q1" value="a"><label for="q1a">Relations between entities are stored as tables</label><BR>
+                        <input type="checkbox" id="q1b" name="q1" value="b"><label for="q1b">Entities are stored as tables</label><BR>
+                        <input type="checkbox" id="q1c" name="q1" value="c"><label for="q1c">Each table has a distinct name</label><BR>
+                        <input type="checkbox" id="q1d" name="q1" value="d"><label for="q1d">The domain for each attribute is prespecified</label><BR>
+                    </p>
+                  </div>
+                  <div class="col-md-4">
+                    
+                      <P>2. What major function below is not typically performed by a database management system?<BR>
+                        <input type="checkbox" id="q2a" name="q2" value="a"><label for="q2a">query optimization. </label><BR>
+                        <input type="checkbox" id="q2b" name="q2" value="b"><label for="q2b">interpreting SQL commands. </label><BR>
+                        <input type="checkbox" id="q2c" name="q2" value="c"><label for="q2c">concurrency management.</label><BR>
+                        <input type="checkbox" id="q2d" name="q2" value="d"><label for="q2d">enforcing data integrity constraints.</label><BR>
+                    </p>
+                 </div>
+                  <div class="col-md-4">
+                    
+                      <P>3. Which of the following are not the main components in a DBMS?<BR>
+                        <input type="checkbox" id="q3a" name="q3" value="a"><label for="q3a">SQL Interface. </label><BR>
+                        <input type="checkbox" id="q3b" name="q3" value="b"><label for="q3b">lock manager. </label><BR>
+                        <input type="checkbox" id="q3c" name="q3" value="c"><label for="q3c">disk space manager.</label><BR>
+                        <input type="checkbox" id="q3d" name="q3" value="d"><label for="q3d">buffer manager.</label><BR>
+                    </p>
+                 </div>
+                  <div class="col-md-4">
+                    
+                      <P>4. Which of the following are advantages of using DBMS to manage data?<BR>
+                        <input type="checkbox" id="q4a" name="q4" value="a"><label for="q4a">Data Independence. </label><BR>
+                        <input type="checkbox" id="q4b" name="q4" value="b"><label for="q4b">Data Integrity and Security. </label><BR>
+                        <input type="checkbox" id="q4c" name="q4" value="c"><label for="q4c">Concurrent Access and Crash Recovery.</label><BR>
+                        <input type="checkbox" id="q4d" name="q4" value="d"><label for="q4d">Adequate performance for real-time applications.</label><BR>
+                    </p>
+                 </div>
+                  <div class="col-md-4">
+                    
+                      <P>5. Which of the following plays an important role in representing information about the real world in a database<BR>
+                        <input type="checkbox" id="q5a" name="q5" value="a"><label for="q5a">Data definition language. </label><BR>
+                        <input type="checkbox" id="q5b" name="q5" value="b"><label for="q5b">Data manipulation language. </label><BR>
+                        <input type="checkbox" id="q5c" name="q5" value="c"><label for="q5c">Buffer manager.</label><BR>
+                        <input type="checkbox" id="q5d" name="q5" value="d"><label for="q5d">Data model.</label><BR>
+                    </p>
+                 </div>
+
+                </div>
+              </div>
+<!--           <P>4. Which of the following are advantages of using DBMS to manage data ?<BR>
+              <input type="checkbox" id="q4a" name="q4" value="a"><label for="q4a">Data Independence.</label><BR>
+              <input type="checkbox" id="q4b" name="q4" value="b"><label for="q4b">Data Integrity and Security.</label><BR>
+              <input type="checkbox" id="q4c" name="q4" value="c"><label for="q4c">Concurrent Access and Crash Recovery.</label><BR>
+              <input type="checkbox" id="q4d" name="q4" value="d"><label for="q4d">Adequate performance for applications with tight real-time constraints.</label><BR>
+          </p> -->
+    <!--input type="submit" value="Submit" /-->
+</form>
+
+
+<!-- Send Data -->
+<script data-cfasync="false" type="text/javascript">
+submitForms = function(){
+    document.getElementById("foo1").submit();
+    document.getElementById("foo2").submit();
+}
+
+</script>
+
+
+<script data-cfasync="false" type="text/javascript">
+
+
+    jQuery( document ).ready(function( $ ) {
+  // Variable to hold request
+      var request;
+
+      // $('#foo1, #foo2').serialize();
+      // Bind to the submit event of our form
+      $("#foo").submit(function(event){
+
+        // Abort any pending request
+        if (request) {
+            request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+
+        // Let's select and cache all the fields
+        var $inputs = $form.find("input, select, button, textarea, checkbox");
+
+        // Serialize the data in the form
+        var serializedData = $('#foo, #foo2').serialize(); //$form.serialize();
+        
+        // Let's disable the inputs for the duration of the Ajax request.
+        // Note: we disable elements AFTER the form data has been serialized.
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
+        $("#result").text("Sending data...");
+        // Fire off the request to /form.php
+        request = $.ajax({
+            url:
+"https://script.google.com/macros/s/AKfycby5AaBzr21-KejHPiptz8-LLtc86kKINawoVPDoUYW74I2mXvYA/exec",
+            type: "post",
+            data: serializedData
+        });
+
+        // Callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR){
+            // Log a message to the console
+            // bootbox.alert("Hello world!", function() {
+            //   Example.show("Hello world callback");
+            // });
+            $("#result").text("Sending Succeeded!");
+            console.log("Hooray, it worked!");
+        });
+
+        // Callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            // Log the error to the console
+            // $("#toggle").toggle(("Sending Failed! Please Resend!"));
+            console.error(
+                "The following error occurred: "+
+                textStatus, errorThrown
+            );
+        });
+
+        // Callback handler that will be called regardless
+        // if the request failed or succeeded
+        request.always(function () {
+            // Reenable the inputs
+            $inputs.prop("disabled", false);
+        });
+
+        // Prevent default posting of form
+        event.preventDefault();
+      });
+
+    });
+//  }
+</script>
+
+
+</body>
+</html>
